@@ -23,6 +23,7 @@ The Dataflow imports data from SQL Server, performs data preparation using Power
 ---
 
 ## Project Workflow
+![](screenshots/workflow.png)
 
 ```text
                 SQL Server
