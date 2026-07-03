@@ -1,360 +1,231 @@
-\# End-to-End Dataflow Gen2 Financial Analytics | Power BI Service
+# End-to-End Dataflow Gen2 Financial Analytics | Power BI Service
 
+An end-to-end Business Intelligence project demonstrating how **SQL Server**, **Power BI Dataflow Gen2**, **Power Query**, **DAX**, and **Power BI Service** work together to build a centralized cloud-based reporting solution.
 
+The project follows an enterprise-style analytics workflow where data is ingested from SQL Server into a reusable Dataflow, transformed using Power Query, analyzed using DAX, and deployed to Power BI Service with automated scheduled refresh.
 
-An end-to-end cloud-based Business Intelligence project demonstrating how \*\*Power BI Dataflow Gen2\*\*, \*\*Power BI Service\*\*, \*\*Power Query\*\*, and \*\*DAX\*\* work together to build a centralized analytics solution.
+---
 
+## Business Problem
 
+Organizations often struggle with maintaining multiple reports connected directly to operational databases, resulting in duplicated transformations, inconsistent metrics, and difficult report maintenance.
 
-The project follows an enterprise-style workflow where data is ingested from SQL Server into a reusable Dataflow, consumed in Power BI Desktop, and finally published to Power BI Service with scheduled refresh.
+A centralized data preparation layer helps ensure consistent business logic, improves report performance, and simplifies report development across teams.
 
+---
 
+## Solution
 
-\---
+This project uses **Power BI Dataflow Gen2** as the centralized ETL layer.
 
+The Dataflow imports data from SQL Server, performs data preparation using Power Query, and serves as the single source of truth for the Power BI report. The final report is published to Power BI Service with Scheduled Refresh enabled for automated data updates.
 
+---
 
-\## Project Overview
-
-
-
-This project demonstrates how modern organizations separate data preparation from report development by using \*\*Power BI Dataflow Gen2\*\* as the central ETL layer.
-
-
-
-The report contains interactive financial analytics dashboards built using DAX measures while ensuring data accuracy through Excel Pivot Table validation.
-
-
-
-\---
-
-
-
-\## Project Workflow
-
-
+## Project Workflow
+![](screenshots/workflow.png)
 
 ```text
-
-SQL Server
-
-&#x20;     │
-
-&#x20;     ▼
-
-Power BI Service
-
-(Dataflow Gen2)
-
-&#x20;     │
-
-&#x20;     ▼
-
-Power Query
-
-(Data Transformation)
-
-&#x20;     │
-
-&#x20;     ▼
-
-Power BI Desktop
-
-&#x20;     │
-
-&#x20;     ▼
-
-DAX Measures
-
-&#x20;     │
-
-&#x20;     ▼
-
-Interactive Financial Report
-
-&#x20;     │
-
-&#x20;     ▼
-
-Power BI Service
-
-&#x20;     │
-
-&#x20;     ▼
-
-Scheduled Refresh
-
+                SQL Server
+                     │
+                     ▼
+        Power BI Service (Dataflow Gen2)
+                     │
+                     ▼
+      Power Query (Cloud Transformation)
+                     │
+                     ▼
+           Power BI Desktop
+                     │
+                     ▼
+              DAX Measures
+                     │
+                     ▼
+      Interactive Financial Report
+                     │
+                     ▼
+        Publish to Power BI Service
+                     │
+                     ▼
+           Scheduled Refresh
 ```
 
+---
 
+## Tech Stack
 
-\---
+- Microsoft SQL Server
+- Power BI Service
+- Power BI Desktop
+- Dataflow Gen2
+- Power Query
+- DAX
+- Microsoft Excel
+- Power BI Workspace
 
+---
 
+## Key Features
 
-\## Tech Stack
+- Built a centralized Dataflow Gen2 pipeline
+- Connected SQL Server as the primary data source
+- Performed cloud-based data transformation using Power Query
+- Created reusable semantic data model
+- Built business KPIs using DAX
+- Developed interactive financial dashboards
+- Validated calculations using Excel Pivot Tables
+- Published reports to Power BI Service
+- Configured Scheduled Refresh
+- Managed reports within a dedicated Power BI Workspace
 
+---
 
+## Skills Demonstrated
 
-\- Microsoft SQL Server
+### Data Engineering
 
-\- Power BI Service
+- Dataflow Gen2
+- ETL Workflow
+- Cloud Data Preparation
+- Workspace Management
 
-\- Power BI Desktop
+### Data Transformation
 
-\- Dataflow Gen2
+- Power Query
+- Data Profiling
+- Data Cleaning
+- Data Validation
 
-\- Power Query
+### Business Intelligence
 
-\- DAX
+- DAX Measures
+- KPI Development
+- Dashboard Development
+- Financial Analytics
 
-\- Microsoft Excel
+### Deployment
 
-\- Power BI Workspace
+- Power BI Service
+- Report Publishing
+- Scheduled Refresh
 
+---
 
+## Repository Structure
 
-\---
-
-
-
-\## Key Features
-
-
-
-\- Built a centralized Dataflow Gen2 pipeline
-
-\- Connected SQL Server as the source system
-
-\- Performed data understanding using Power Query
-
-\- Developed interactive financial dashboards
-
-\- Created business KPIs using DAX
-
-\- Validated report calculations using Excel Pivot Tables
-
-\- Published report to Power BI Service
-
-\- Configured scheduled refresh
-
-\- Organized assets inside a dedicated Power BI Workspace
-
-
-
-\---
-
-
-
-\## Skills Demonstrated
-
-
-
-\### Data Engineering
-
-
-
-\- Dataflow Gen2
-
-\- ETL Workflow
-
-\- Data Refresh
-
-\- Workspace Management
-
-
-
-\### Data Transformation
-
-
-
-\- Power Query
-
-\- Data Profiling
-
-\- Data Cleaning
-
-
-
-\### Business Intelligence
-
-
-
-\- DAX Measures
-
-\- KPI Reporting
-
-\- Interactive Visualizations
-
-\- Dashboard Development
-
-
-
-\### Reporting
-
-
-
-\- Power BI Service
-
-\- Report Publishing
-
-\- Scheduled Refresh
-
-
-
-\---
-
-
-
-\## Repository Structure
-
-
-
-```
-
+```text
+powerbi-dataflow-financial-analytics-project
+│
 ├── dataflow.pbix
-
-├── loan\_dataset.csv
-
-├── screenshots
-
-│   ├── dataflow.png
-
-│   ├── financial\_report.png
-
-│   ├── semantic\_model.png
-
-│   └── sql\_server\_to\_dataflow.png
-
-└── README.md
-
+├── loan_dataset.csv
+├── README.md
+└── screenshots
+    ├── dataflow.png
+    ├── financial_report.png
+    ├── semantic_model.png
+    └── sql_server_to_dataflow.png
 ```
 
+---
 
+# Dashboard Preview
 
-\---
+## Dataflow
 
+![Dataflow](screenshots/dataflow.png)
 
+---
 
-\## Dashboard Preview
+## SQL Server to Dataflow
 
+![SQL Server to Dataflow](screenshots/sql_server_to_dataflow.png)
 
+---
 
-\### Dataflow Pipeline
+## Semantic Model
 
+![Semantic Model](screenshots/semantic_model.png)
 
+---
 
-!\[Dataflow](screenshots/dataflow.png)
+## Financial Analytics Dashboard
 
+![Financial Dashboard](screenshots/financial_report.png)
 
+---
 
-\---
+## Project Deliverables
 
+- End-to-End Dataflow Gen2 Pipeline
+- Financial Analytics Dashboard
+- Cloud-Based ETL Workflow
+- SQL Server Integration
+- Interactive Power BI Report
+- Automated Scheduled Refresh
+- Excel-Based Data Validation
+- Power BI Service Deployment
 
+---
 
-\### SQL Server to Dataflow
+## Project Highlights
 
+- Enterprise-style reporting workflow
+- Centralized cloud ETL using Dataflow Gen2
+- SQL Server as operational data source
+- Advanced DAX calculations
+- Power Query transformations
+- Semantic model development
+- Interactive KPI dashboard
+- Automated report refresh
+- Business metric validation using Excel
 
+---
 
-!\[SQL Server to Dataflow](screenshots/sql\_server\_to\_dataflow.png)
+## Future Enhancements
 
+- Implement Incremental Refresh
+- Add Row-Level Security (RLS)
+- Deploy using Power BI Deployment Pipelines
+- Connect multiple source systems
+- Build executive dashboard with drill-through pages
 
+---
 
-\---
+## Learning Outcomes
 
+This project strengthened my practical understanding of:
 
+- Power BI Service
+- Dataflow Gen2
+- Cloud-based ETL
+- Power Query
+- DAX
+- Semantic Modeling
+- Dashboard Development
+- Scheduled Refresh
+- Enterprise Reporting Workflow
 
-\### Semantic Model
+---
 
+## Repository Features
 
+- Enterprise BI Architecture
+- Cloud Data Pipeline
+- Interactive Financial Dashboard
+- Automated Data Refresh
+- Data Validation
+- Business KPI Reporting
+- Production-style Workflow
 
-!\[Semantic Model](screenshots/semantic\_model.png)
+---
 
+## Author
 
+**Sagar Bairwa**
 
-\---
+- GitHub: https://github.com/sagar-bairwa
+- LinkedIn: https://linkedin.com/in/sagarbairwa
 
+---
 
-
-\### Financial Analytics Dashboard
-
-
-
-!\[Financial Report](screenshots/financial\_report.png)
-
-
-
-\---
-
-
-
-\## Project Highlights
-
-
-
-\- End-to-End Power BI Dataflow Gen2 Implementation
-
-\- Enterprise-style Cloud ETL Workflow
-
-\- SQL Server Integration
-
-\- Power Query Transformations
-
-\- Advanced DAX Calculations
-
-\- Financial KPI Dashboard
-
-\- Scheduled Refresh Configuration
-
-\- Data Validation using Excel Pivot Tables
-
-
-
-\---
-
-
-
-\## Learning Outcomes
-
-
-
-This project helped strengthen practical knowledge of:
-
-
-
-\- Power BI Service
-
-\- Dataflow Gen2
-
-\- Cloud-based ETL
-
-\- DAX
-
-\- Power Query
-
-\- Report Publishing
-
-\- Scheduled Refresh
-
-\- Enterprise Reporting Workflow
-
-
-
-\---
-
-
-
-\## Author
-
-
-
-\*\*Sagar Bairwa\*\*
-
-
-
-GitHub: https://github.com/sagar-bairwa
-
-
-
-LinkedIn: https://linkedin.com/in/sagarbairwa
-
+⭐ If you found this project helpful, consider giving it a star.
