@@ -1,4 +1,4 @@
-# End-to-End Dataflow Financial Analytics | Power BI Service
+# End-to-End Dataflow Gen2 Financial Analytics | Power BI Service
 
 An enterprise-style Business Intelligence project demonstrating how **SQL Server**, **Power BI Dataflow Gen2**, **Power Query**, **DAX**, and **Power BI Service** work together to build a centralized cloud-based reporting solution.
 
